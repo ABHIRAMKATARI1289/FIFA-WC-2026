@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run ETL
+        run: python src/etl.py
+
+      - name: Run Feature Engineering
+        run: python src/features.py
+
+      - name: Run Model Training
+        run: python src/model.py
+
+      - name: Test API startup
+        run: |
+          python -m uvicorn api.main:app &
+          sleep 5
+          curl http://localhost:8000/
