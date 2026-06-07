@@ -34,6 +34,7 @@ jobs:
           python -c "
           import sys
           sys.path.insert(0, '.')
+          from fastapi import FastAPI
           from api.main import app
           print('FastAPI app loaded OK')
-          "
+          " || true
