@@ -125,18 +125,11 @@ Most sports ML projects predict past tournaments on Kaggle data. This one:
 
 ## Model Monitoring (Evidently AI)
 
-Drift analysis comparing WC football across eras (1990–2006 vs 2010–2014):
+![Drift Report](assets/drift_report_screenshot.png)
 
-```
-Feature drift detected (5/11 features):
-  ⚠ away_goals_scored_avg   — scoring patterns changed
-  ⚠ away_win_rate           — competitive balance shifted
-  ⚠ h2h_matches             — more data available for modern teams
-  ⚠ home_goals_scored_avg   — offensive play evolved
-  ⚠ home_win_rate           — team strength distributions shifted
-```
-
-This confirms that football has changed structurally across decades — justifying the decision to train on 1990+ data only rather than all historical WC data.
+Drift analysis comparing WC football across eras (1990–2006 vs 2010–2014).
+5/11 features show statistically significant drift, confirming that football has
+changed structurally across decades — justifying the decision to train on 1990+ data only.
 
 ---
 
