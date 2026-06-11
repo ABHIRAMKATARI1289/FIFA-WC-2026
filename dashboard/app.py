@@ -725,22 +725,31 @@ def predict_match(home, away, is_knockout=0):
     if model is None:
         hw = hs["win_rate"]/(hs["win_rate"]+as_["win_rate"])*0.70
         aw = as_["win_rate"]/(hs["win_rate"]+as_["win_rate"])*0.70
-        return hw, max(1-hw-aw, 0.05), aw
-    features = pd.DataFrame([{
-        "home_win_rate": hs["win_rate"],
-        "home_goals_scored_avg": hs["goals_scored"],
-        "home_goals_conceded_avg": hs["goals_conceded"],
-        "away_win_rate": as_["win_rate"],
-        "away_goals_scored_avg": as_["goals_scored"],
-        "away_goals_conceded_avg": as_["goals_conceded"],
-        "h2h_home_win_rate": 0.5, "h2h_matches": 3,
-        "goal_diff_avg": (hs["goals_scored"]-hs["goals_conceded"])-(as_["goals_scored"]-as_["goals_conceded"]),
-        "win_rate_diff": hs["win_rate"]-as_["win_rate"],
-        "is_knockout": is_knockout,
-    }])
-    probs = model.predict_proba(features)[0]
-    cm    = {c:i for i,c in enumerate(model.classes_)}
-    return probs[cm[2]], probs[cm[1]], probs[cm[0]]
+        d  = max(1-hw-aw, 0.05)
+    else:
+        features = pd.DataFrame([{
+            "home_win_rate": hs["win_rate"],
+            "home_goals_scored_avg": hs["goals_scored"],
+            "home_goals_conceded_avg": hs["goals_conceded"],
+            "away_win_rate": as_["win_rate"],
+            "away_goals_scored_avg": as_["goals_scored"],
+            "away_goals_conceded_avg": as_["goals_conceded"],
+            "h2h_home_win_rate": 0.5, "h2h_matches": 3,
+            "goal_diff_avg": (hs["goals_scored"]-hs["goals_conceded"])-(as_["goals_scored"]-as_["goals_conceded"]),
+            "win_rate_diff": hs["win_rate"]-as_["win_rate"],
+            "is_knockout": is_knockout,
+        }])
+        probs = model.predict_proba(features)[0]
+        cm    = {c:i for i,c in enumerate(model.classes_)}
+        hw, d, aw = probs[cm[2]], probs[cm[1]], probs[cm[0]]
+
+    # Knockout — no draws
+    if is_knockout:
+        hw = hw + d * 0.5
+        aw = aw + d * 0.5
+        d  = 0.0
+
+    return hw, d, aw
 
 WIN_PROBS = load_win_probs()
 BADGES    = {1:"🥇", 2:"🥈", 3:"🥉"}
