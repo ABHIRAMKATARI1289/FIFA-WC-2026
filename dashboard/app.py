@@ -738,6 +738,7 @@ def predict_match(home, away, is_knockout=0):
             "goal_diff_avg": (hs["goals_scored"]-hs["goals_conceded"])-(as_["goals_scored"]-as_["goals_conceded"]),
             "win_rate_diff": hs["win_rate"]-as_["win_rate"],
             "is_knockout": is_knockout,
+            "is_neutral_venue": 1,
         }])
         probs = model.predict_proba(features)[0]
         cm    = {c:i for i,c in enumerate(model.classes_)}
@@ -924,14 +925,16 @@ elif page == "Predict":
     st.markdown('<div class="page-sub">ML-powered win/draw/loss probabilities for any WC 2026 matchup</div>', unsafe_allow_html=True)
 
     pc1, pc2, pc3, pc4 = st.columns([4,1,4,2])
-    home_t = pc1.selectbox("Home Team", TEAMS, index=0, key="p_home",
+    home_t = pc1.selectbox("Team 1", TEAMS, index=0, key="p_home",
                            format_func=lambda x: f"{FLAGS.get(x,'🏳')} {x}")
     pc2.markdown("<p style='text-align:center;color:rgba(255,255,255,0.2);padding-top:36px;'>vs</p>",
                  unsafe_allow_html=True)
-    away_t = pc3.selectbox("Away Team", TEAMS, index=3, key="p_away",
+    away_t = pc3.selectbox("Team 2", TEAMS, index=3, key="p_away",
                            format_func=lambda x: f"{FLAGS.get(x,'🏳')} {x}")
     stage  = pc4.selectbox("Stage", ["Group Stage","Knockout"], key="p_stage")
     is_ko  = stage == "Knockout"
+
+    st.caption("ℹ️ WC 2026 is played at neutral venues in USA, Canada & Mexico. Team order follows the official fixture draw.")
 
     st.markdown("<div style='height:8px'></div>", unsafe_allow_html=True)
     if st.button("⚽  Predict Match", key="full_pred", use_container_width=False):
