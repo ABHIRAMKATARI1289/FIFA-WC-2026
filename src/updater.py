@@ -85,7 +85,7 @@ def update_live_results():
     df["outcome"] = df.apply(determine_outcome, axis=1)
 
     finished = df[df["status"] == "FINISHED"]
-    scheduled = df[df["status"] == "SCHEDULED"]
+    scheduled = df[df["status"].isin(["SCHEDULED", "TIMED"])]
 
     print(f"  Finished matches:  {len(finished)}")
     print(f"  Scheduled matches: {len(scheduled)}")
@@ -122,7 +122,7 @@ if __name__ == "__main__":
 
     if df is not None:
         # Step 2: show upcoming match predictions
-        scheduled = df[df["status"] == "SCHEDULED"].head(5)
+        scheduled = df[df["status"].isin(["SCHEDULED", "TIMED"])].head(5)
         if len(scheduled) > 0:
             print(f"\nPredictions for upcoming matches:")
             for _, row in scheduled.iterrows():
