@@ -9,6 +9,5 @@ data/processed/shootouts.csv
 data/processed/world_cups_summary.csv
 data/processed/features.csv
 data/processed/live_matches.csv
-models/
 *.pkl
 .DS_Store
