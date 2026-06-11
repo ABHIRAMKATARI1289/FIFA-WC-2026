@@ -37,8 +37,10 @@ def parse_matches(raw):
     """Parse API response into clean dataframe."""
     matches = []
     for m in raw.get("matches", []):
-        home = m["homeTeam"]["name"]
-        away = m["awayTeam"]["name"]
+        home = m["homeTeam"].get("name") or "TBD"
+        away = m["awayTeam"].get("name") or "TBD"
+        if home == "TBD" or away == "TBD":
+            continue
         status = m["status"]  # SCHEDULED, IN_PLAY, FINISHED
         stage  = m["stage"]
         date   = m["utcDate"]

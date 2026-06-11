@@ -22,13 +22,13 @@ def get_team_form(team, match_date, results_df, n=20):
 
     for _, row in recent.iterrows():
         if row["home_team"] == team:
-            goals_scored += row["home_score"]
-            goals_conceded += row["away_score"]
+            goals_scored += row["home_goals"]    # ← was home_score
+            goals_conceded += row["away_goals"]  # ← was away_score
             if row["outcome"] == "home_win":
                 wins += 1
         else:
-            goals_scored += row["away_score"]
-            goals_conceded += row["home_score"]
+            goals_scored += row["away_goals"]    # ← was away_score
+            goals_conceded += row["home_goals"]  # ← was home_score
             if row["outcome"] == "away_win":
                 wins += 1
 

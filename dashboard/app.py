@@ -586,106 +586,99 @@ hr { border: none; border-top: 1px solid rgba(255,255,255,0.07) !important; marg
 #  DATA & MODEL
 # ══════════════════════════════════════════════════════════════════════════════
 TEAMS = [
-    "Argentina","France","Brazil","England","Spain","Germany",
-    "Portugal","Netherlands","Belgium","Croatia","Uruguay",
-    "Colombia","Mexico","USA","Japan","South Korea","Morocco",
-    "Senegal","Switzerland","Denmark","Poland","Serbia","Turkey",
-    "Australia","Ecuador","Chile","Peru","Canada","Iran",
-    "Saudi Arabia","Cameroon","Ghana","Tunisia","Algeria",
-    "Nigeria","Ivory Coast","Czech Republic","Sweden","Norway",
-    "Greece","Costa Rica","Panama","Honduras","Venezuela",
-    "Qatar","Jamaica","New Zealand",
+    "Argentina", "France", "Brazil", "England", "Spain", "Germany",
+    "Portugal", "Netherlands", "Belgium", "Croatia", "Uruguay",
+    "Colombia", "Mexico", "United States", "Japan", "South Korea",
+    "Morocco", "Senegal", "Switzerland", "Sweden", "Norway",
+    "Turkey", "Australia", "Ecuador", "Canada", "Iran",
+    "Saudi Arabia", "Ivory Coast", "Ghana", "Tunisia", "Algeria",
+    "Scotland", "South Africa", "Czechia", "Bosnia-Herzegovina",
+    "Curaçao", "Cape Verde Islands", "Congo DR", "Uzbekistan",
+    "Haiti", "Jordan", "Iraq", "Paraguay", "Qatar", "New Zealand",
+    "Egypt", "Austria", "Poland",
 ]
+
 FLAGS = {
     "Argentina":"🇦🇷","France":"🇫🇷","Brazil":"🇧🇷","England":"🏴󠁧󠁢󠁥󠁮󠁧󠁿",
     "Spain":"🇪🇸","Germany":"🇩🇪","Portugal":"🇵🇹","Netherlands":"🇳🇱",
     "Belgium":"🇧🇪","Croatia":"🇭🇷","Uruguay":"🇺🇾","Colombia":"🇨🇴",
-    "Mexico":"🇲🇽","USA":"🇺🇸","Japan":"🇯🇵","South Korea":"🇰🇷",
-    "Morocco":"🇲🇦","Senegal":"🇸🇳","Switzerland":"🇨🇭","Denmark":"🇩🇰",
-    "Poland":"🇵🇱","Serbia":"🇷🇸","Turkey":"🇹🇷","Australia":"🇦🇺",
-    "Ecuador":"🇪🇨","Chile":"🇨🇱","Peru":"🇵🇪","Canada":"🇨🇦",
-    "Iran":"🇮🇷","Saudi Arabia":"🇸🇦","Cameroon":"🇨🇲","Ghana":"🇬🇭",
-    "Tunisia":"🇹🇳","Algeria":"🇩🇿","Nigeria":"🇳🇬","Ivory Coast":"🇨🇮",
-    "Czech Republic":"🇨🇿","Sweden":"🇸🇪","Norway":"🇳🇴","Greece":"🇬🇷",
-    "Costa Rica":"🇨🇷","Panama":"🇵🇦","Honduras":"🇭🇳","Venezuela":"🇻🇪",
-    "Qatar":"🇶🇦","Jamaica":"🇯🇲","New Zealand":"🇳🇿",
+    "Mexico":"🇲🇽","United States":"🇺🇸","Japan":"🇯🇵","South Korea":"🇰🇷",
+    "Morocco":"🇲🇦","Senegal":"🇸🇳","Switzerland":"🇨🇭","Sweden":"🇸🇪",
+    "Norway":"🇳🇴","Turkey":"🇹🇷","Australia":"🇦🇺","Ecuador":"🇪🇨",
+    "Canada":"🇨🇦","Iran":"🇮🇷","Saudi Arabia":"🇸🇦","Ivory Coast":"🇨🇮",
+    "Ghana":"🇬🇭","Tunisia":"🇹🇳","Algeria":"🇩🇿","Scotland":"🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+    "South Africa":"🇿🇦","Czechia":"🇨🇿","Bosnia-Herzegovina":"🇧🇦",
+    "Curaçao":"🇨🇼","Cape Verde Islands":"🇨🇻","Congo DR":"🇨🇩",
+    "Uzbekistan":"🇺🇿","Haiti":"🇭🇹","Jordan":"🇯🇴","Iraq":"🇮🇶",
+    "Paraguay":"🇵🇾","Qatar":"🇶🇦","New Zealand":"🇳🇿","Egypt":"🇪🇬",
+    "Austria":"🇦🇹","Poland":"🇵🇱",
 }
+
 ABBR = {
     "Argentina":"ARG","France":"FRA","Brazil":"BRA","England":"ENG",
     "Spain":"ESP","Germany":"GER","Portugal":"POR","Netherlands":"NED",
     "Belgium":"BEL","Croatia":"CRO","Uruguay":"URU","Colombia":"COL",
-    "Mexico":"MEX","USA":"USA","Japan":"JPN","South Korea":"KOR",
-    "Morocco":"MAR","Senegal":"SEN","Switzerland":"SUI","Denmark":"DEN",
-    "Poland":"POL","Serbia":"SRB","Turkey":"TUR","Australia":"AUS",
-    "Ecuador":"ECU","Chile":"CHI","Peru":"PER","Canada":"CAN",
-    "Iran":"IRN","Saudi Arabia":"KSA","Cameroon":"CMR","Ghana":"GHA",
-    "Tunisia":"TUN","Algeria":"ALG","Nigeria":"NGA","Ivory Coast":"CIV",
-    "Czech Republic":"CZE","Sweden":"SWE","Norway":"NOR","Greece":"GRE",
-    "Costa Rica":"CRC","Panama":"PAN","Honduras":"HON","Venezuela":"VEN",
-    "Qatar":"QAT","Jamaica":"JAM","New Zealand":"NZL",
+    "Mexico":"MEX","United States":"USA","Japan":"JPN","South Korea":"KOR",
+    "Morocco":"MAR","Senegal":"SEN","Switzerland":"SUI","Sweden":"SWE",
+    "Norway":"NOR","Turkey":"TUR","Australia":"AUS","Ecuador":"ECU",
+    "Canada":"CAN","Iran":"IRN","Saudi Arabia":"KSA","Ivory Coast":"CIV",
+    "Ghana":"GHA","Tunisia":"TUN","Algeria":"ALG","Scotland":"SCO",
+    "South Africa":"RSA","Czechia":"CZE","Bosnia-Herzegovina":"BIH",
+    "Curaçao":"CUW","Cape Verde Islands":"CPV","Congo DR":"COD",
+    "Uzbekistan":"UZB","Haiti":"HAI","Jordan":"JOR","Iraq":"IRQ",
+    "Paraguay":"PAR","Qatar":"QAT","New Zealand":"NZL","Egypt":"EGY",
+    "Austria":"AUT","Poland":"POL",
 }
-GROUPS = {
-    "A":["USA","Panama","Honduras","Morocco"],
-    "B":["Spain","Croatia","Uruguay","Colombia"],
-    "C":["Argentina","Chile","Peru","Australia"],
-    "D":["France","Mexico","Poland","Saudi Arabia"],
-    "E":["Brazil","Colombia","Ecuador","Japan"],
-    "F":["England","Netherlands","Senegal","Iran"],
-    "G":["Portugal","Turkey","Czech Republic","Cameroon"],
-    "H":["Germany","Belgium","Algeria","New Zealand"],
-    "I":["South Korea","Ghana","Costa Rica","Greece"],
-    "J":["Switzerland","Serbia","Ivory Coast","Canada"],
-    "K":["Denmark","Nigeria","Venezuela","Qatar"],
-    "L":["Tunisia","Sweden","Norway","Jamaica"],
-}
+
 TEAM_STATS = {
-    "Argentina":    {"win_rate":0.72,"goals_scored":2.3,"goals_conceded":0.7},
-    "France":       {"win_rate":0.68,"goals_scored":2.1,"goals_conceded":0.9},
-    "Brazil":       {"win_rate":0.65,"goals_scored":2.0,"goals_conceded":0.8},
-    "England":      {"win_rate":0.63,"goals_scored":1.9,"goals_conceded":0.8},
-    "Spain":        {"win_rate":0.67,"goals_scored":2.2,"goals_conceded":0.7},
-    "Germany":      {"win_rate":0.60,"goals_scored":1.9,"goals_conceded":1.0},
-    "Portugal":     {"win_rate":0.65,"goals_scored":2.1,"goals_conceded":0.9},
-    "Netherlands":  {"win_rate":0.60,"goals_scored":1.8,"goals_conceded":0.9},
-    "Belgium":      {"win_rate":0.58,"goals_scored":1.8,"goals_conceded":1.0},
-    "Croatia":      {"win_rate":0.55,"goals_scored":1.5,"goals_conceded":0.9},
-    "Uruguay":      {"win_rate":0.55,"goals_scored":1.6,"goals_conceded":1.0},
-    "Colombia":     {"win_rate":0.55,"goals_scored":1.7,"goals_conceded":1.0},
-    "Mexico":       {"win_rate":0.52,"goals_scored":1.6,"goals_conceded":1.1},
-    "USA":          {"win_rate":0.50,"goals_scored":1.5,"goals_conceded":1.1},
-    "Japan":        {"win_rate":0.50,"goals_scored":1.4,"goals_conceded":1.0},
-    "South Korea":  {"win_rate":0.48,"goals_scored":1.3,"goals_conceded":1.1},
-    "Morocco":      {"win_rate":0.52,"goals_scored":1.4,"goals_conceded":0.9},
-    "Senegal":      {"win_rate":0.50,"goals_scored":1.4,"goals_conceded":1.0},
-    "Switzerland":  {"win_rate":0.52,"goals_scored":1.5,"goals_conceded":1.0},
-    "Denmark":      {"win_rate":0.52,"goals_scored":1.5,"goals_conceded":0.9},
-    "Poland":       {"win_rate":0.48,"goals_scored":1.4,"goals_conceded":1.1},
-    "Serbia":       {"win_rate":0.48,"goals_scored":1.5,"goals_conceded":1.2},
-    "Turkey":       {"win_rate":0.48,"goals_scored":1.4,"goals_conceded":1.1},
-    "Australia":    {"win_rate":0.45,"goals_scored":1.2,"goals_conceded":1.2},
-    "Ecuador":      {"win_rate":0.45,"goals_scored":1.3,"goals_conceded":1.2},
-    "Chile":        {"win_rate":0.45,"goals_scored":1.3,"goals_conceded":1.2},
-    "Peru":         {"win_rate":0.42,"goals_scored":1.2,"goals_conceded":1.3},
-    "Canada":       {"win_rate":0.45,"goals_scored":1.3,"goals_conceded":1.2},
-    "Iran":         {"win_rate":0.45,"goals_scored":1.2,"goals_conceded":1.1},
-    "Saudi Arabia": {"win_rate":0.40,"goals_scored":1.1,"goals_conceded":1.3},
-    "Cameroon":     {"win_rate":0.42,"goals_scored":1.2,"goals_conceded":1.3},
-    "Ghana":        {"win_rate":0.40,"goals_scored":1.1,"goals_conceded":1.3},
-    "Tunisia":      {"win_rate":0.42,"goals_scored":1.1,"goals_conceded":1.1},
-    "Algeria":      {"win_rate":0.45,"goals_scored":1.3,"goals_conceded":1.1},
-    "Nigeria":      {"win_rate":0.45,"goals_scored":1.4,"goals_conceded":1.2},
-    "Ivory Coast":  {"win_rate":0.45,"goals_scored":1.3,"goals_conceded":1.2},
-    "Czech Republic":{"win_rate":0.45,"goals_scored":1.3,"goals_conceded":1.1},
-    "Sweden":       {"win_rate":0.48,"goals_scored":1.4,"goals_conceded":1.1},
-    "Norway":       {"win_rate":0.50,"goals_scored":1.6,"goals_conceded":1.1},
-    "Greece":       {"win_rate":0.42,"goals_scored":1.2,"goals_conceded":1.2},
-    "Costa Rica":   {"win_rate":0.40,"goals_scored":1.1,"goals_conceded":1.3},
-    "Panama":       {"win_rate":0.38,"goals_scored":1.0,"goals_conceded":1.4},
-    "Honduras":     {"win_rate":0.35,"goals_scored":0.9,"goals_conceded":1.5},
-    "Venezuela":    {"win_rate":0.38,"goals_scored":1.0,"goals_conceded":1.3},
-    "Qatar":        {"win_rate":0.35,"goals_scored":0.9,"goals_conceded":1.4},
-    "Jamaica":      {"win_rate":0.35,"goals_scored":0.9,"goals_conceded":1.4},
-    "New Zealand":  {"win_rate":0.32,"goals_scored":0.8,"goals_conceded":1.5},
+    "Argentina":          {"win_rate":0.55,"goals_scored":1.90,"goals_conceded":1.01},
+    "France":             {"win_rate":0.51,"goals_scored":1.83,"goals_conceded":1.29},
+    "Brazil":             {"win_rate":0.63,"goals_scored":2.18,"goals_conceded":0.90},
+    "England":            {"win_rate":0.57,"goals_scored":2.18,"goals_conceded":0.96},
+    "Spain":              {"win_rate":0.59,"goals_scored":2.05,"goals_conceded":0.90},
+    "Germany":            {"win_rate":0.58,"goals_scored":2.25,"goals_conceded":1.16},
+    "Portugal":           {"win_rate":0.50,"goals_scored":1.76,"goals_conceded":1.12},
+    "Netherlands":        {"win_rate":0.51,"goals_scored":2.09,"goals_conceded":1.22},
+    "Belgium":            {"win_rate":0.45,"goals_scored":1.81,"goals_conceded":1.51},
+    "Croatia":            {"win_rate":0.53,"goals_scored":1.74,"goals_conceded":1.01},
+    "Uruguay":            {"win_rate":0.44,"goals_scored":1.58,"goals_conceded":1.21},
+    "Colombia":           {"win_rate":0.40,"goals_scored":1.29,"goals_conceded":1.16},
+    "Mexico":             {"win_rate":0.51,"goals_scored":1.76,"goals_conceded":1.05},
+    "United States":      {"win_rate":0.44,"goals_scored":1.52,"goals_conceded":1.33},
+    "Japan":              {"win_rate":0.49,"goals_scored":1.83,"goals_conceded":1.15},
+    "South Korea":        {"win_rate":0.53,"goals_scored":1.78,"goals_conceded":0.91},
+    "Morocco":            {"win_rate":0.50,"goals_scored":1.49,"goals_conceded":0.80},
+    "Senegal":            {"win_rate":0.47,"goals_scored":1.38,"goals_conceded":0.94},
+    "Switzerland":        {"win_rate":0.36,"goals_scored":1.49,"goals_conceded":1.64},
+    "Sweden":             {"win_rate":0.49,"goals_scored":1.97,"goals_conceded":1.29},
+    "Norway":             {"win_rate":0.38,"goals_scored":1.55,"goals_conceded":1.62},
+    "Turkey":             {"win_rate":0.40,"goals_scored":1.40,"goals_conceded":1.41},
+    "Australia":          {"win_rate":0.51,"goals_scored":2.01,"goals_conceded":1.07},
+    "Ecuador":            {"win_rate":0.31,"goals_scored":1.21,"goals_conceded":1.53},
+    "Canada":             {"win_rate":0.38,"goals_scored":1.30,"goals_conceded":1.31},
+    "Iran":               {"win_rate":0.57,"goals_scored":1.89,"goals_conceded":0.79},
+    "Saudi Arabia":       {"win_rate":0.47,"goals_scored":1.54,"goals_conceded":1.05},
+    "Ivory Coast":        {"win_rate":0.51,"goals_scored":1.64,"goals_conceded":1.00},
+    "Ghana":              {"win_rate":0.46,"goals_scored":1.57,"goals_conceded":1.04},
+    "Tunisia":            {"win_rate":0.44,"goals_scored":1.44,"goals_conceded":1.01},
+    "Algeria":            {"win_rate":0.47,"goals_scored":1.54,"goals_conceded":1.00},
+    "Scotland":           {"win_rate":0.47,"goals_scored":1.71,"goals_conceded":1.24},
+    "South Africa":       {"win_rate":0.45,"goals_scored":1.35,"goals_conceded":0.95},
+    "Czechia":            {"win_rate":0.48,"goals_scored":1.85,"goals_conceded":1.24},
+    "Bosnia-Herzegovina": {"win_rate":0.37,"goals_scored":1.37,"goals_conceded":1.37},
+    "Curaçao":            {"win_rate":0.37,"goals_scored":1.64,"goals_conceded":1.58},
+    "Cape Verde Islands": {"win_rate":0.38,"goals_scored":1.10,"goals_conceded":1.12},
+    "Congo DR":           {"win_rate":0.39,"goals_scored":1.49,"goals_conceded":1.20},
+    "Uzbekistan":         {"win_rate":0.48,"goals_scored":1.73,"goals_conceded":1.11},
+    "Haiti":              {"win_rate":0.42,"goals_scored":1.64,"goals_conceded":1.34},
+    "Jordan":             {"win_rate":0.37,"goals_scored":1.28,"goals_conceded":1.11},
+    "Iraq":               {"win_rate":0.47,"goals_scored":1.54,"goals_conceded":0.93},
+    "Paraguay":           {"win_rate":0.35,"goals_scored":1.28,"goals_conceded":1.42},
+    "Qatar":              {"win_rate":0.41,"goals_scored":1.41,"goals_conceded":1.21},
+    "New Zealand":        {"win_rate":0.41,"goals_scored":1.76,"goals_conceded":1.50},
+    "Egypt":              {"win_rate":0.50,"goals_scored":1.62,"goals_conceded":1.01},
+    "Austria":            {"win_rate":0.43,"goals_scored":1.79,"goals_conceded":1.53},
+    "Poland":             {"win_rate":0.43,"goals_scored":1.68,"goals_conceded":1.35},
 }
 DEFAULT_STATS = {"win_rate":0.40,"goals_scored":1.1,"goals_conceded":1.3}
 
@@ -1117,88 +1110,36 @@ elif page == "Live":
 
     st.markdown("<div style='height:28px'></div>", unsafe_allow_html=True)
 
-    schedule = [
-        ("Jun 11","USA","Canada","MetLife Stadium"),
-        ("Jun 12","Mexico","Ecuador","AT&T Stadium"),
-        ("Jun 12","Argentina","Chile","Hard Rock Stadium"),
-        ("Jun 13","Brazil","Colombia","SoFi Stadium"),
-        ("Jun 13","Spain","Croatia","Rose Bowl"),
-        ("Jun 14","France","Mexico","Gillette Stadium"),
-        ("Jun 14","England","Senegal","Lincoln Financial"),
-        ("Jun 15","Portugal","Turkey","Levi's Stadium"),
-        ("Jun 15","Germany","Belgium","NRG Stadium"),
-    ]
-    html5 = '<div class="glass">'
-    html5 += '<div class="sec-label">🗓 Opening Fixtures — Predicted Outcomes</div>'
-    for date, home, away, venue in schedule:
-        hf = FLAGS.get(home,"🏳"); af = FLAGS.get(away,"🏳")
-        hw, d, aw = predict_match(home, away)
-        fav    = home if hw > aw else away
-        fav_p  = max(hw, aw)*100
-        fav_ab = ABBR.get(fav, fav[:3].upper())
-        html5 += f"""
-        <div class="sched-row">
-          <div class="sched-date">{date}</div>
-          <div class="sched-home">{hf} {home}</div>
-          <div class="sched-vs">vs</div>
-          <div class="sched-away">{af} {away}</div>
-          <div class="sched-fav">
-            <div class="sched-fav-pct">{fav_p:.0f}%</div>
-            <div class="sched-fav-tag">{fav_ab} fav</div>
-          </div>
-          <div class="sched-venue">{venue}</div>
-        </div>"""
-    html5 += "</div>"
-    st.markdown(html5, unsafe_allow_html=True)
-
-    # Probability radar for top 6
-    st.markdown("<div style='height:24px'></div>", unsafe_allow_html=True)
-    top6 = sorted(WIN_PROBS.items(), key=lambda x: x[1], reverse=True)[:6]
-    categories = ["Win Rate","Goals Scored","Low Concede","H2H","Form","Tournament %"]
-    fig_radar = go.Figure()
-    colors_r   = ["#e8a020","#4ecb87","#5b9cf6","#e05050","#b87af5","#f5c842"]
-    for (team, prob), col in zip(top6, colors_r):
-        ts = get_stats(team)
-        vals = [
-            ts["win_rate"]*100,
-            ts["goals_scored"]*25,
-            (2.0-ts["goals_conceded"])*50,
-            55,
-            ts["win_rate"]*95,
-            prob*500,
-        ]
-        vals = [min(max(v,0),100) for v in vals]
-        fill_colors = [
-            "rgba(232,160,32,0.10)","rgba(78,203,135,0.10)","rgba(91,156,246,0.10)",
-            "rgba(224,80,80,0.10)","rgba(184,122,245,0.10)","rgba(245,200,66,0.10)",
-        ]
-        fill_c = fill_colors[colors_r.index(col)]
-        fig_radar.add_trace(go.Scatterpolar(
-            r=vals+[vals[0]], theta=categories+[categories[0]],
-            fill="toself",
-            fillcolor=fill_c,
-            line=dict(color=col, width=2),
-            name=f"{FLAGS.get(team,'')} {team}",
-            hovertemplate=f"<b>{team}</b><br>%{{theta}}: %{{r:.0f}}<extra></extra>",
-        ))
-    fig_radar.update_layout(
-        polar=dict(
-            bgcolor="rgba(0,0,0,0)",
-            radialaxis=dict(visible=True, range=[0,100], showticklabels=False,
-                            gridcolor="rgba(255,255,255,0.07)", linecolor="rgba(255,255,255,0.07)"),
-            angularaxis=dict(tickfont=dict(color="#999",size=11,family="Inter"),
-                             gridcolor="rgba(255,255,255,0.07)"),
-        ),
-        paper_bgcolor="rgba(0,0,0,0)",
-        margin=dict(l=60,r=60,t=30,b=30),
-        height=380,
-        legend=dict(font=dict(color="#aaa",size=11,family="Inter"),
-                    orientation="h",x=0.5,xanchor="center",y=-0.05),
-        showlegend=True,
-    )
-    st.markdown('<div class="glass">', unsafe_allow_html=True)
-    st.markdown('<div class="sec-label">📊 Top 6 Contenders — Attribute Radar</div>', unsafe_allow_html=True)
-    st.plotly_chart(fig_radar, use_container_width=True, config={"displayModeBar":False})
-    st.markdown("</div>", unsafe_allow_html=True)
-
-    st.markdown("</div>", unsafe_allow_html=True)
+    # Load live fixtures from updater
+    base = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    live_path = os.path.join(base, "data", "processed", "live_matches.csv")
+    if os.path.exists(live_path):
+        df_sched = pd.read_csv(live_path)
+        df_sched = df_sched[df_sched["status"].isin(["SCHEDULED", "TIMED", "IN_PLAY", "FINISHED"])]
+        df_sched["date_fmt"] = pd.to_datetime(df_sched["date"]).dt.strftime("%-d %b")  # "11 Jun"
+        
+        html5 = '<div class="glass">'
+        html5 += '<div class="sec-label">🗓 Opening Fixtures — Predicted Outcomes</div>'
+        for _, row in df_sched.head(9).iterrows():
+            home, away = str(row["home_team"]), str(row["away_team"])
+            hf = FLAGS.get(home, "🏳"); af = FLAGS.get(away, "🏳")
+            hw, d, aw = predict_match(home, away)
+            fav   = home if hw > aw else away
+            fav_p = max(hw, aw) * 100
+            fav_ab = ABBR.get(fav, fav[:3].upper())
+            html5 += f"""
+            <div class="sched-row">
+            <div class="sched-date">{row['date_fmt']}</div>
+            <div class="sched-home">{hf} {home}</div>
+            <div class="sched-vs">vs</div>
+            <div class="sched-away">{af} {away}</div>
+            <div class="sched-fav">
+                <div class="sched-fav-pct">{fav_p:.0f}%</div>
+                <div class="sched-fav-tag">{fav_ab} fav</div>
+            </div>
+            </div>"""
+        html5 += "</div>"
+        st.markdown(html5, unsafe_allow_html=True)
+    else:
+        st.warning("Run `python src/updater.py` to load live fixtures.")
+ 
