@@ -841,11 +841,27 @@ if page == "Standings":
     # ── Right: Upcoming + Predictor ──
     with right:
         # Upcoming matches
-        upcoming = [
-            ("Argentina","Morocco",0.71,"ARG"),
-            ("Spain","Croatia",0.63,"ESP"),
-            ("Brazil","Colombia",0.58,"BRA"),
-        ]
+        try:
+            _api_key = st.secrets["FOOTBALL_API_KEY"]
+            _headers = {"X-Auth-Token": _api_key}
+            _r = __import__("requests").get(
+                "https://api.football-data.org/v4/competitions/2000/matches?status=SCHEDULED",
+                headers=_headers, timeout=5
+            )
+            _matches = _r.json().get("matches", [])[:3]
+            upcoming = []
+            for m in _matches:
+                _home = m["homeTeam"]["name"]
+                _away = m["awayTeam"]["name"]
+                _hw, _d, _aw = predict_match(_home, _away, 0)
+                _fav = _home if _hw > _aw else _away
+                upcoming.append((_home, _away, max(_hw,_aw), ABBR.get(_fav, _fav[:3].upper())))
+        except:
+            upcoming = [
+                ("Mexico","South Africa",0.58,"MEX"),
+                ("USA","Paraguay",0.52,"USA"),
+                ("Brazil","Morocco",0.71,"BRA"),
+            ]
         html2 = '<div class="glass" style="margin-bottom:16px;">'
         html2 += '<div class="sec-label">📅 Upcoming Matches</div>'
         for home, away, prob, winner in upcoming:
