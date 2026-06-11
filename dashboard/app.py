@@ -682,6 +682,21 @@ TEAM_STATS = {
 }
 DEFAULT_STATS = {"win_rate":0.40,"goals_scored":1.1,"goals_conceded":1.3}
 
+GROUPS = {
+    "A": ["Mexico", "South Korea", "Czechia", "South Africa"],
+    "B": ["Canada", "Qatar", "Switzerland", "Bosnia-Herzegovina"],
+    "C": ["United States", "Paraguay", "Australia", "Turkey"],
+    "D": ["Brazil", "Morocco", "Haiti", "Scotland"],
+    "E": ["Germany", "Ivory Coast", "Ecuador", "Curaçao"],
+    "F": ["Netherlands", "Japan", "Sweden", "Tunisia"],
+    "G": ["Spain", "Saudi Arabia", "Uruguay", "Cape Verde Islands"],
+    "H": ["Belgium", "Iran", "New Zealand", "Egypt"],
+    "I": ["France", "Senegal", "Iraq", "Norway"],
+    "J": ["Argentina", "Algeria", "Austria", "Jordan"],
+    "K": ["Portugal", "Congo DR", "Uzbekistan", "Colombia"],
+    "L": ["England", "Croatia", "Ghana", "Poland"],
+}
+
 def get_stats(t): return TEAM_STATS.get(t, DEFAULT_STATS)
 
 @st.cache_data
