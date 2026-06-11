@@ -98,7 +98,9 @@ def update_live_results():
     if len(finished) > 0:
         print(f"\nLatest results:")
         for _, row in finished.tail(5).iterrows():
-            print(f"  {row['home_team']} {int(row['home_goals'])} - {int(row['away_goals'])} {row['away_team']}")
+            hg = int(row['home_goals']) if row['home_goals'] is not None else '?'
+            ag = int(row['away_goals']) if row['away_goals'] is not None else '?'
+            print(f"  {row['home_team']} {hg} - {ag} {row['away_team']}")
 
     return df
 
