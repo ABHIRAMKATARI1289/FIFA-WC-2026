@@ -1,9 +1,0 @@
-{
-  "model_accuracy_2014": 0.6875,
-  "total_test_matches": 80,
-  "correct_predictions": 55,
-  "reports": {
-    "drift": "reports/drift_report.html",
-    "classification": "reports/classification_report.html"
-  }
-}
