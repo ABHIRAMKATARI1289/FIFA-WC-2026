@@ -93,6 +93,7 @@ def build_features(wc_matches, results):
             "home_goals":     match["home_goals"],
             "away_goals":     match["away_goals"],
             "outcome":        match["outcome"],
+            "is_neutral_venue": 1,  # All WC matches are neutral venue
 
             # Home team form
             "home_win_rate":           home_form["win_rate"],

@@ -105,6 +105,7 @@ def predict_match(home, away, is_knockout=0):
                                    (as_["goals_scored"] - as_["goals_conceded"]),
         "win_rate_diff":           hs["win_rate"] - as_["win_rate"],
         "is_knockout":             is_knockout,
+        "is_neutral_venue": 1,
     }])
     probs = model.predict_proba(features)[0]
     # map to home_win, draw, away_win

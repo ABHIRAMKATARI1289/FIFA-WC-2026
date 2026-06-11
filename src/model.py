@@ -14,7 +14,8 @@ FEATURE_COLS = [
     "home_win_rate", "home_goals_scored_avg", "home_goals_conceded_avg",
     "away_win_rate", "away_goals_scored_avg", "away_goals_conceded_avg",
     "h2h_home_win_rate", "h2h_matches",
-    "goal_diff_avg", "win_rate_diff", "is_knockout"
+    "goal_diff_avg", "win_rate_diff", "is_knockout",
+    "is_neutral_venue"  
 ]
 
 def encode_outcome(df):
