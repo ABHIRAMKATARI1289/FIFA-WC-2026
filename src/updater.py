@@ -48,8 +48,13 @@ def parse_matches(raw):
         home_goals = None
         away_goals = None
         if status == "FINISHED":
-            home_goals = m["score"]["fullTime"]["home"]
-            away_goals = m["score"]["fullTime"]["away"]
+            ft = m["score"]["fullTime"]
+            rt = m["score"].get("regularTime", {})
+            home_goals = ft.get("home") if ft.get("home") is not None else rt.get("home")
+            away_goals = ft.get("away") if ft.get("away") is not None else rt.get("away")
+            # Convert 0 explicitly
+            if home_goals is None: home_goals = 0
+            if away_goals is None: away_goals = 0
 
         matches.append({
             "match_id":   m["id"],
@@ -98,8 +103,8 @@ def update_live_results():
     if len(finished) > 0:
         print(f"\nLatest results:")
         for _, row in finished.tail(5).iterrows():
-            hg = int(row['home_goals']) if row['home_goals'] is not None else '?'
-            ag = int(row['away_goals']) if row['away_goals'] is not None else '?'
+            hg = int(row['home_goals']) if pd.notna(row['home_goals']) else '?'
+            ag = int(row['away_goals']) if pd.notna(row['away_goals']) else '?'
             print(f"  {row['home_team']} {hg} - {ag} {row['away_team']}")
 
     return df

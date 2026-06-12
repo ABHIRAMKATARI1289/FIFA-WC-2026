@@ -111,7 +111,8 @@ if __name__ == "__main__":
         "h2h_matches": 5,
         "goal_diff_avg": -0.4,
         "win_rate_diff": -0.05,
-        "is_knockout": 1
+        "is_knockout": 1,
+        "is_neutral_venue": 1,
     }])
     probs = best_model.predict_proba(sample)[0]
     classes = best_model.classes_
