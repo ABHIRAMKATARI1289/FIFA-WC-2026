@@ -755,11 +755,11 @@ def predict_match(home, away, is_knockout=0):
 WIN_PROBS = load_win_probs()
 _live_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "processed", "live_matches.csv")
 MATCHES_PLAYED = 0
-MATCHES_LEFT = 104 - MATCHES_PLAYED
 if os.path.exists(_live_path):
     _ldf = pd.read_csv(_live_path)
     MATCHES_PLAYED = len(_ldf[_ldf["status"] == "FINISHED"])
-BADGES    = {1:"🥇", 2:"🥈", 3:"🥉"}
+MATCHES_LEFT = 104 - MATCHES_PLAYED
+BADGES = {1:"🥇", 2:"🥈", 3:"🥉"}
 
 # ══════════════════════════════════════════════════════════════════════════════
 #  STATE & NAV
