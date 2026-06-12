@@ -753,11 +753,16 @@ def predict_match(home, away, is_knockout=0):
     return hw, d, aw
 
 WIN_PROBS = load_win_probs()
-_live_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "processed", "live_matches.csv")
-MATCHES_PLAYED = 0
-if os.path.exists(_live_path):
-    _ldf = pd.read_csv(_live_path)
-    MATCHES_PLAYED = len(_ldf[_ldf["status"] == "FINISHED"])
+
+@st.cache_data(ttl=60)
+def get_matches_played():
+    _live_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "processed", "live_matches.csv")
+    if os.path.exists(_live_path):
+        _ldf = pd.read_csv(_live_path)
+        return len(_ldf[_ldf["status"] == "FINISHED"])
+    return 0
+
+MATCHES_PLAYED = get_matches_played()
 MATCHES_LEFT = 104 - MATCHES_PLAYED
 BADGES = {1:"🥇", 2:"🥈", 3:"🥉"}
 
