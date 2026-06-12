@@ -35,4 +35,5 @@ jobs:
           git config --global user.name "GitHub Action"
           git add data/processed/live_matches.csv data/processed/wc2026_predictions.json
           git diff --staged --quiet || git commit -m "auto update - $(date '+%Y-%m-%d %H:%M')"
+          git pull --rebase origin main
           git push
