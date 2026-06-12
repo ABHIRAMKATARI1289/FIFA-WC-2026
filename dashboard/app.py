@@ -1146,7 +1146,7 @@ elif page == "Live":
                 <div class="glass" style="margin-bottom:10px;display:flex;align-items:center;gap:20px;">
                   <span style="font-size:16px;font-weight:700;">{hf} {row.get('home_team','')}</span>
                   <span style="font-size:22px;font-weight:900;color:#e8a020;">
-                    {int(row.get('home_score',0))} – {int(row.get('away_score',0))}
+                    {int(row.get('home_goals',0)) if pd.notna(row.get('home_goals',0)) else 0} – {int(row.get('away_goals',0)) if pd.notna(row.get('away_goals',0)) else 0}
                   </span>
                   <span style="font-size:16px;font-weight:700;">{af} {row.get('away_team','')}</span>
                 </div>""", unsafe_allow_html=True)
