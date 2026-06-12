@@ -755,6 +755,7 @@ def predict_match(home, away, is_knockout=0):
 WIN_PROBS = load_win_probs()
 _live_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "processed", "live_matches.csv")
 MATCHES_PLAYED = 0
+MATCHES_LEFT = 104 - MATCHES_PLAYED
 if os.path.exists(_live_path):
     _ldf = pd.read_csv(_live_path)
     MATCHES_PLAYED = len(_ldf[_ldf["status"] == "FINISHED"])
@@ -802,8 +803,8 @@ if page == "Standings":
         <div class="stat-label">Teams in tournament</div>
       </div>
       <div class="stat-card">
-        <div class="stat-val white">104</div>
-        <div class="stat-label">Total matches</div>
+        <div class="stat-val white">{MATCHES_LEFT}</div>
+        <div class="stat-label">Matches remaining</div>
       </div>
       <div class="stat-card">
         <div class="stat-val gold">10K</div>
