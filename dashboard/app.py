@@ -1139,7 +1139,7 @@ elif page == "Live":
         live_path = os.path.join(base,"data","processed","live_matches.csv")
         if os.path.exists(live_path):
             df = pd.read_csv(live_path)
-            for _, row in df.iterrows():
+            for _, row in df[df["status"] == "FINISHED"].iterrows():
                 hf = FLAGS.get(str(row.get("home_team","")), "🏳")
                 af = FLAGS.get(str(row.get("away_team","")), "🏳")
                 st.markdown(f"""
