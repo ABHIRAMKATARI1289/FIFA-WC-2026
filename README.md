@@ -28,45 +28,45 @@ Most sports ML projects predict past tournaments on Kaggle data. This one:
 │                        DATA PIPELINE                            │
 │  Kaggle WC Dataset + International Results (49,306 matches)     │
 │                    ↓  src/etl.py                                │
-│           Cleaned, Standardized → data/processed/              │
+│           Cleaned, Standardized → data/processed/               │
 └─────────────────────────────────────────────────────────────────┘
                               ↓
 ┌─────────────────────────────────────────────────────────────────┐
 │                    FEATURE ENGINEERING                          │
-│  src/features.py — 20+ match-state features per game           │
-│  • Team form (last 20 matches)  • Head-to-head win rate        │
-│  • Goals scored/conceded avg    • Win rate differential        │
-│  • Knockout stage flag          • Goal diff average            │
+│  src/features.py — 20+ match-state features per game            │
+│  • Team form (last 20 matches)  • Head-to-head win rate         │
+│  • Goals scored/conceded avg    • Win rate differential         │
+│  • Knockout stage flag          • Goal diff average             │
 └─────────────────────────────────────────────────────────────────┘
                               ↓
 ┌─────────────────────────────────────────────────────────────────┐
 │                    LAYER 1 — MATCH MODEL                        │
-│  src/model.py — Logistic Regression + XGBoost                  │
-│  • Time-based split (train: 1990–2010, test: 2014)             │
-│  • Brier Score: 0.1555  |  Accuracy: 68.8% on WC 2014         │
-│  • Calibrated probabilities for Win / Draw / Loss              │
+│  src/model.py — Logistic Regression + XGBoost                   │
+│  • Time-based split (train: 1990–2010, test: 2014)              │
+│  • Brier Score: 0.1555  |  Accuracy: 68.8% on WC 2014           │
+│  • Calibrated probabilities for Win / Draw / Loss               │
 └─────────────────────────────────────────────────────────────────┘
                               ↓
 ┌─────────────────────────────────────────────────────────────────┐
 │                 LAYER 2 — TOURNAMENT SIMULATOR                  │
-│  src/simulator.py — Monte Carlo (10,000 simulations)           │
-│  • Simulates full 104-match bracket end-to-end                 │
-│  • Outputs each team's probability of winning WC 2026          │
-│  • Top prediction: Argentina 18.9%                             │
+│  src/simulator.py — Monte Carlo (10,000 simulations)            │
+│  • Simulates full 104-match bracket end-to-end                  │
+│  • Outputs each team's probability of winning WC 2026           │
+│  • Top prediction: Argentina 18.9%                              │
 └─────────────────────────────────────────────────────────────────┘
                               ↓
 ┌─────────────────────────────────────────────────────────────────┐
 │                  LAYER 3 — LIVE UPDATER                         │
-│  src/updater.py — football-data.org API                        │
-│  • Fetches real match results after each game                  │
-│  • Re-runs simulator with actual scores locked in              │
-│  • Tracks model accuracy against real outcomes                 │
+│  src/updater.py — football-data.org API                         │
+│  • Fetches real match results after each game                   │
+│  • Re-runs simulator with actual scores locked in               │
+│  • Tracks model accuracy against real outcomes                  │
 └─────────────────────────────────────────────────────────────────┘
                               ↓
 ┌─────────────────────────────────────────────────────────────────┐
 │              FASTAPI + STREAMLIT DASHBOARD                      │
-│  api/main.py → /predict  /simulate  /live  /standings          │
-│  dashboard/app.py → Live public dashboard                      │
+│  api/main.py → /predict  /simulate  /live  /standings           │
+│  dashboard/app.py → Live public dashboard                       │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
