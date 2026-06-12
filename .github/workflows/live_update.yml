@@ -1,0 +1,36 @@
+name: Live Match Updates
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Fetch live results
+        env:
+          FOOTBALL_API_KEY: ${{ secrets.FOOTBALL_API_KEY }}
+        run: python src/updater.py
+
+      - name: Re-run simulator
+        run: python src/simulator.py
+
+      - name: Push updated data
+        run: |
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+          git add data/processed/live_matches.csv data/processed/wc2026_predictions.json
+          git diff --staged --quiet || git commit -m "auto update - $(date '+%Y-%m-%d %H:%M')"
+          git push
