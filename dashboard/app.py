@@ -753,6 +753,11 @@ def predict_match(home, away, is_knockout=0):
     return hw, d, aw
 
 WIN_PROBS = load_win_probs()
+_live_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "processed", "live_matches.csv")
+MATCHES_PLAYED = 0
+if os.path.exists(_live_path):
+    _ldf = pd.read_csv(_live_path)
+    MATCHES_PLAYED = len(_ldf[_ldf["status"] == "FINISHED"])
 BADGES    = {1:"🥇", 2:"🥈", 3:"🥉"}
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -790,7 +795,7 @@ if page == "Standings":
     st.markdown('<div class="page-wrap">', unsafe_allow_html=True)
 
     # ── Stat cards ──────────────────────────────────────────────────────────
-    st.markdown("""
+    st.markdown(f"""
     <div class="stat-grid">
       <div class="stat-card">
         <div class="stat-val gold">48</div>
@@ -805,7 +810,7 @@ if page == "Standings":
         <div class="stat-label">Monte Carlo simulations</div>
       </div>
       <div class="stat-card">
-        <div class="stat-val white">0</div>
+        <div class="stat-val white">{MATCHES_PLAYED}</div>
         <div class="stat-label">Matches played</div>
       </div>
     </div>
