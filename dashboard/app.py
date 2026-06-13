@@ -15,7 +15,7 @@ def get_base64_image(path):
     
 # ── Page config ───────────────────────────────────────────────────────────────
 from PIL import Image
-icon = Image.open("assets/icon.webp")
+icon = Image.open("assets/icon.png")
 
 st.set_page_config(
     page_title="FIFA WC 2026 Predictor",
