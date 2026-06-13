@@ -15,7 +15,7 @@ def get_base64_image(path):
     
 # ── Page config ───────────────────────────────────────────────────────────────
 from PIL import Image
-icon = Image.open("assets/icon.png")
+icon = Image.open("assets/icon.webp")
 
 st.set_page_config(
     page_title="FIFA WC 2026 Predictor",
@@ -781,7 +781,7 @@ if "page" not in st.session_state:
     st.session_state.page = "Standings"
 
 # ── Top bar ──────────────────────────────────────────────────────────────────
-icon_b64 = get_base64_image("assets/icon.png")
+icon_b64 = get_base64_image("assets/icon.webp")
 st.markdown(f"""
 <div class="topbar">
   <div class="topbar-brand">
