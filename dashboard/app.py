@@ -7,7 +7,12 @@ import sys
 import pickle
 import datetime
 import plotly.graph_objects as go
+import base64
 
+def get_base64_image(path):
+    with open(path, "rb") as f:
+        return base64.b64encode(f.read()).decode()
+    
 # ── Page config ───────────────────────────────────────────────────────────────
 from PIL import Image
 icon = Image.open("assets/icon.png")
@@ -776,10 +781,11 @@ if "page" not in st.session_state:
     st.session_state.page = "Standings"
 
 # ── Top bar ──────────────────────────────────────────────────────────────────
-st.markdown("""
+icon_b64 = get_base64_image("assets/icon.png")
+st.markdown(f"""
 <div class="topbar">
   <div class="topbar-brand">
-    <div class="topbar-icon">⚽</div>
+    <div class="topbar-icon"><img src="data:image/png;base64,{{icon_b64}}" style="width:32px;height:32px;border-radius:8px;object-fit:cover;"></div>
     <span class="topbar-title">FIFA WC 2026 Predictor</span>
     <span class="live-badge"><span class="live-dot"></span>Live</span>
   </div>
