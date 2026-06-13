@@ -787,10 +787,10 @@ st.markdown("""
 nav_spacer, nav_area = st.columns([5, 5])
 with nav_area:
     n1,n2,n3,n4 = st.columns(4)
-    if n1.button("⚽ Standings", key="n_s", use_container_width=True): st.session_state.page="Standings"
-    if n2.button("🔮 Predict",   key="n_p", use_container_width=True): st.session_state.page="Predict"
-    if n3.button("🏆 Bracket",   key="n_b", use_container_width=True): st.session_state.page="Bracket"
-    if n4.button("📡 Live",      key="n_l", use_container_width=True): st.session_state.page="Live"
+    if n1.button("Standings", key="n_s", use_container_width=True): st.session_state.page="Standings"
+    if n2.button("Predict",   key="n_p", use_container_width=True): st.session_state.page="Predict"
+    if n3.button("Bracket",   key="n_b", use_container_width=True): st.session_state.page="Bracket"
+    if n4.button("Live",      key="n_l", use_container_width=True): st.session_state.page="Live"
 
 page = st.session_state.page
 
