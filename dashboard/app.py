@@ -9,9 +9,12 @@ import datetime
 import plotly.graph_objects as go
 
 # ── Page config ───────────────────────────────────────────────────────────────
+from PIL import Image
+icon = Image.open("assets/icon.png")
+
 st.set_page_config(
     page_title="FIFA WC 2026 Predictor",
-    page_icon="assets/icon.png",
+    page_icon=icon,
     layout="wide",
     initial_sidebar_state="collapsed",
 )
