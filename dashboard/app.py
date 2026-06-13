@@ -11,7 +11,7 @@ import plotly.graph_objects as go
 # ── Page config ───────────────────────────────────────────────────────────────
 st.set_page_config(
     page_title="FIFA WC 2026 Predictor",
-    page_icon="⚽",
+    page_icon="assets/icon.png",
     layout="wide",
     initial_sidebar_state="collapsed",
 )
