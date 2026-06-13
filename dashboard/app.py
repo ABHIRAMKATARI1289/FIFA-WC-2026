@@ -785,7 +785,7 @@ icon_b64 = get_base64_image("assets/icon.webp")
 st.markdown(f"""
 <div class="topbar">
   <div class="topbar-brand">
-    <div class="topbar-icon"><img src="data:image/png;base64,{{icon_b64}}" style="width:32px;height:32px;border-radius:8px;object-fit:cover;"></div>
+    <div class="topbar-icon" style="background:none;"><img src="data:image/webp;base64,{icon_b64}" style="width:40px;height:40px;border-radius:8px;object-fit:contain;"></div>
     <span class="topbar-title">FIFA WC 2026 Predictor</span>
     <span class="live-badge"><span class="live-dot"></span>Live</span>
   </div>
