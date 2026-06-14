@@ -8,7 +8,7 @@ match_id,date,stage,status,home_team,away_team,home_goals,away_goals,outcome
 537340,2026-06-14T01:00:00Z,GROUP_STAGE,FINISHED,Haiti,Scotland,0.0,1.0,away_win
 537346,2026-06-14T04:00:00Z,GROUP_STAGE,FINISHED,Australia,Turkey,2.0,0.0,home_win
 537351,2026-06-14T17:00:00Z,GROUP_STAGE,FINISHED,Germany,Curaçao,7.0,1.0,home_win
-537357,2026-06-14T20:00:00Z,GROUP_STAGE,TIMED,Netherlands,Japan,,,
+537357,2026-06-14T20:00:00Z,GROUP_STAGE,IN_PLAY,Netherlands,Japan,,,
 537352,2026-06-14T23:00:00Z,GROUP_STAGE,TIMED,Ivory Coast,Ecuador,,,
 537358,2026-06-15T02:00:00Z,GROUP_STAGE,TIMED,Sweden,Tunisia,,,
 537369,2026-06-15T16:00:00Z,GROUP_STAGE,TIMED,Spain,Cape Verde Islands,,,
