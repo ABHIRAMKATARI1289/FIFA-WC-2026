@@ -218,17 +218,9 @@ docker run -p 8000:8000 fifa-wc-2026
 | `GET /standings` | Current tournament win probabilities |
 | `GET /teams` | All team stats |
 
-Interactive docs at `http://localhost:8000/docs`
-
----
-
-## Resume Bullet
-
-> *Built FIFA WC 2026 live prediction system on 49K+ international match records; engineered 20+ match-state features with strict temporal validation, trained calibrated Logistic Regression model (Brier: 0.1555, Accuracy: 68.8% on WC 2014 holdout); Monte Carlo bracket simulator (10K runs); deployed FastAPI + Docker with Evidently AI drift monitoring and live Streamlit dashboard — running concurrently with the actual tournament*
-
 ---
 
 ## Author
 
-**Katari Abhiram** — EEE Final Year, NITK Surathkal  
+**Katari Abhiram** — NITK Surathkal  
 [GitHub](https://github.com/ABHIRAMKATARI1289)
