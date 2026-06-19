@@ -27,7 +27,7 @@ match_id,date,stage,status,home_team,away_team,home_goals,away_goals,outcome
 537335,2026-06-18T19:00:00Z,GROUP_STAGE,FINISHED,Switzerland,Bosnia-Herzegovina,4.0,1.0,home_win
 537336,2026-06-18T22:00:00Z,GROUP_STAGE,FINISHED,Canada,Qatar,6.0,0.0,home_win
 537330,2026-06-19T01:00:00Z,GROUP_STAGE,FINISHED,Mexico,South Korea,1.0,0.0,home_win
-537348,2026-06-19T19:00:00Z,GROUP_STAGE,PAUSED,United States,Australia,,,
+537348,2026-06-19T19:00:00Z,GROUP_STAGE,FINISHED,United States,Australia,2.0,0.0,home_win
 537342,2026-06-19T22:00:00Z,GROUP_STAGE,TIMED,Scotland,Morocco,,,
 537341,2026-06-20T00:30:00Z,GROUP_STAGE,TIMED,Brazil,Haiti,,,
 537347,2026-06-20T03:00:00Z,GROUP_STAGE,TIMED,Turkey,Paraguay,,,
