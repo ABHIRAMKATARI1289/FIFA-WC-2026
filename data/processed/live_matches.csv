@@ -34,7 +34,7 @@ match_id,date,stage,status,home_team,away_team,home_goals,away_goals,outcome
 537359,2026-06-20T17:00:00Z,GROUP_STAGE,FINISHED,Netherlands,Sweden,5.0,1.0,home_win
 537353,2026-06-20T20:00:00Z,GROUP_STAGE,FINISHED,Germany,Ivory Coast,2.0,1.0,home_win
 537354,2026-06-21T00:00:00Z,GROUP_STAGE,FINISHED,Ecuador,Curaçao,0.0,0.0,draw
-537360,2026-06-21T04:00:00Z,GROUP_STAGE,IN_PLAY,Tunisia,Japan,,,
+537360,2026-06-21T04:00:00Z,GROUP_STAGE,FINISHED,Tunisia,Japan,0.0,4.0,away_win
 537371,2026-06-21T16:00:00Z,GROUP_STAGE,TIMED,Spain,Saudi Arabia,,,
 537365,2026-06-21T19:00:00Z,GROUP_STAGE,TIMED,Belgium,Iran,,,
 537372,2026-06-21T22:00:00Z,GROUP_STAGE,TIMED,Uruguay,Cape Verde Islands,,,
