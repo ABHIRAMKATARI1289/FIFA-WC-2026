@@ -1,7 +1,7 @@
 match_id,date,stage,status,home_team,away_team,home_goals,away_goals,outcome
 537327,2026-06-11T19:00:00Z,GROUP_STAGE,FINISHED,Mexico,South Africa,2.0,0.0,home_win
 537328,2026-06-12T02:00:00Z,GROUP_STAGE,FINISHED,South Korea,Czechia,2.0,1.0,home_win
-537333,2026-06-12T19:00:00Z,GROUP_STAGE,FINISHED,Canada,Bosnia-Herzegovina,0.0,0.0,draw
+537333,2026-06-12T19:00:00Z,GROUP_STAGE,FINISHED,Canada,Bosnia-Herzegovina,1.0,1.0,draw
 537345,2026-06-13T01:00:00Z,GROUP_STAGE,FINISHED,United States,Paraguay,4.0,1.0,home_win
 537334,2026-06-13T19:00:00Z,GROUP_STAGE,FINISHED,Qatar,Switzerland,1.0,1.0,draw
 537339,2026-06-13T22:00:00Z,GROUP_STAGE,FINISHED,Brazil,Morocco,1.0,1.0,draw
@@ -37,7 +37,7 @@ match_id,date,stage,status,home_team,away_team,home_goals,away_goals,outcome
 537360,2026-06-21T04:00:00Z,GROUP_STAGE,FINISHED,Tunisia,Japan,0.0,4.0,away_win
 537371,2026-06-21T16:00:00Z,GROUP_STAGE,FINISHED,Spain,Saudi Arabia,4.0,0.0,home_win
 537365,2026-06-21T19:00:00Z,GROUP_STAGE,FINISHED,Belgium,Iran,0.0,0.0,draw
-537372,2026-06-21T22:00:00Z,GROUP_STAGE,TIMED,Uruguay,Cape Verde Islands,,,
+537372,2026-06-21T22:00:00Z,GROUP_STAGE,IN_PLAY,Uruguay,Cape Verde Islands,,,
 537366,2026-06-22T01:00:00Z,GROUP_STAGE,TIMED,New Zealand,Egypt,,,
 537399,2026-06-22T17:00:00Z,GROUP_STAGE,TIMED,Argentina,Austria,,,
 537393,2026-06-22T21:00:00Z,GROUP_STAGE,TIMED,France,Iraq,,,
