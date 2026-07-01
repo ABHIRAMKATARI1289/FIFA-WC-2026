@@ -77,7 +77,7 @@ match_id,date,stage,status,home_team,away_team,home_goals,away_goals,outcome
 537418,2026-06-30T01:00:00Z,LAST_32,FINISHED,Netherlands,Morocco,3.0,4.0,away_win
 537424,2026-06-30T17:00:00Z,LAST_32,FINISHED,Ivory Coast,Norway,1.0,2.0,away_win
 537416,2026-06-30T21:00:00Z,LAST_32,FINISHED,France,Sweden,3.0,0.0,home_win
-537425,2026-07-01T01:00:00Z,LAST_32,IN_PLAY,Mexico,Ecuador,,,
+537425,2026-07-01T01:00:00Z,LAST_32,FINISHED,Mexico,Ecuador,2.0,0.0,home_win
 537426,2026-07-01T16:00:00Z,LAST_32,TIMED,England,Congo DR,,,
 537422,2026-07-01T20:00:00Z,LAST_32,TIMED,Belgium,Senegal,,,
 537421,2026-07-02T00:00:00Z,LAST_32,TIMED,United States,Bosnia-Herzegovina,,,
@@ -88,3 +88,5 @@ match_id,date,stage,status,home_team,away_team,home_goals,away_goals,outcome
 537427,2026-07-03T22:00:00Z,LAST_32,TIMED,Argentina,Cape Verde Islands,,,
 537430,2026-07-04T01:30:00Z,LAST_32,TIMED,Colombia,Ghana,,,
 537376,2026-07-04T17:00:00Z,LAST_16,TIMED,Canada,Morocco,,,
+537375,2026-07-04T21:00:00Z,LAST_16,TIMED,Paraguay,France,,,
+537377,2026-07-05T20:00:00Z,LAST_16,TIMED,Brazil,Norway,,,
