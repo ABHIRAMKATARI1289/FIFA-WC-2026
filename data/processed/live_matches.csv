@@ -90,3 +90,5 @@ match_id,date,stage,status,home_team,away_team,home_goals,away_goals,outcome
 537376,2026-07-04T17:00:00Z,LAST_16,TIMED,Canada,Morocco,,,
 537375,2026-07-04T21:00:00Z,LAST_16,TIMED,Paraguay,France,,,
 537377,2026-07-05T20:00:00Z,LAST_16,TIMED,Brazil,Norway,,,
+537378,2026-07-06T00:00:00Z,LAST_16,TIMED,Mexico,England,,,
+537380,2026-07-07T00:00:00Z,LAST_16,TIMED,United States,Belgium,,,
