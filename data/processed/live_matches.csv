@@ -90,7 +90,7 @@ match_id,date,stage,status,home_team,away_team,home_goals,away_goals,outcome
 537376,2026-07-04T17:00:00Z,LAST_16,FINISHED,Canada,Morocco,0.0,3.0,away_win
 537375,2026-07-04T21:00:00Z,LAST_16,FINISHED,Paraguay,France,0.0,1.0,away_win
 537377,2026-07-05T20:00:00Z,LAST_16,FINISHED,Brazil,Norway,1.0,2.0,away_win
-537378,2026-07-06T01:00:00Z,LAST_16,IN_PLAY,Mexico,England,,,
+537378,2026-07-06T01:00:00Z,LAST_16,FINISHED,Mexico,England,2.0,3.0,away_win
 537379,2026-07-06T19:00:00Z,LAST_16,TIMED,Portugal,Spain,,,
 537380,2026-07-07T00:00:00Z,LAST_16,TIMED,United States,Belgium,,,
 537381,2026-07-07T16:00:00Z,LAST_16,TIMED,Argentina,Egypt,,,
