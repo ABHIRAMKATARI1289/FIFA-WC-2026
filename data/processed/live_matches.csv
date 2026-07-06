@@ -96,3 +96,4 @@ match_id,date,stage,status,home_team,away_team,home_goals,away_goals,outcome
 537381,2026-07-07T16:00:00Z,LAST_16,TIMED,Argentina,Egypt,,,
 537382,2026-07-07T20:00:00Z,LAST_16,TIMED,Switzerland,Colombia,,,
 537383,2026-07-09T20:00:00Z,QUARTER_FINALS,TIMED,France,Morocco,,,
+537385,2026-07-11T21:00:00Z,QUARTER_FINALS,TIMED,Norway,England,,,
