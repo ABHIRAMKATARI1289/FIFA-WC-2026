@@ -93,7 +93,7 @@ match_id,date,stage,status,home_team,away_team,home_goals,away_goals,outcome
 537378,2026-07-06T01:00:00Z,LAST_16,FINISHED,Mexico,England,2.0,3.0,away_win
 537379,2026-07-06T19:00:00Z,LAST_16,FINISHED,Portugal,Spain,0.0,1.0,away_win
 537380,2026-07-07T00:00:00Z,LAST_16,FINISHED,United States,Belgium,1.0,4.0,away_win
-537381,2026-07-07T16:00:00Z,LAST_16,TIMED,Argentina,Egypt,,,
+537381,2026-07-07T16:00:00Z,LAST_16,PAUSED,Argentina,Egypt,,,
 537382,2026-07-07T20:00:00Z,LAST_16,TIMED,Switzerland,Colombia,,,
 537383,2026-07-09T20:00:00Z,QUARTER_FINALS,TIMED,France,Morocco,,,
 537384,2026-07-10T19:00:00Z,QUARTER_FINALS,TIMED,Spain,Belgium,,,
