@@ -95,7 +95,7 @@ match_id,date,stage,status,home_team,away_team,home_goals,away_goals,outcome
 537380,2026-07-07T00:00:00Z,LAST_16,FINISHED,United States,Belgium,1.0,4.0,away_win
 537381,2026-07-07T16:00:00Z,LAST_16,FINISHED,Argentina,Egypt,3.0,2.0,home_win
 537382,2026-07-07T20:00:00Z,LAST_16,FINISHED,Switzerland,Colombia,4.0,3.0,home_win
-537383,2026-07-09T20:00:00Z,QUARTER_FINALS,TIMED,France,Morocco,,,
+537383,2026-07-09T20:00:00Z,QUARTER_FINALS,IN_PLAY,France,Morocco,,,
 537384,2026-07-10T19:00:00Z,QUARTER_FINALS,TIMED,Spain,Belgium,,,
 537385,2026-07-11T21:00:00Z,QUARTER_FINALS,TIMED,Norway,England,,,
 537386,2026-07-12T01:00:00Z,QUARTER_FINALS,TIMED,Argentina,Switzerland,,,
