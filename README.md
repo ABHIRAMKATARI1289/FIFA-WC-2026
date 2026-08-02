@@ -1,4 +1,4 @@
-# ⚽ FIFA WC 2026 — Live Match Prediction System
+# FIFA WC 2026 — Live Match Prediction System
 
 > **End-to-end ML system that predicts FIFA World Cup 2026 match outcomes in real-time, simulates full tournament brackets using Monte Carlo methods, and updates predictions live as results come in — deployed and running during the actual tournament.**
 
