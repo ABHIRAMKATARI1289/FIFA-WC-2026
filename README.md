@@ -115,8 +115,8 @@ Most sports ML projects predict past tournaments on Kaggle data. This one:
 | 🥉 | 🇧🇷 Brazil | 8.3% |
 | 4 | 🇫🇷 France | 6.5% |
 | 5 | 🇵🇹 Portugal | 6.3% |
-| 6 | 🇩🇰 Denmark | 6.0% |
-| 7 | 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England | 4.6% |
+| 6 | 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England| 6.0% |
+| 7 | 🇳🇱 Netherlands | 4.6% |
 | 8 | 🇰🇷 South Korea | 4.5% |
 
 *Updated live as real match results come in during the tournament.*
